@@ -1,9 +1,9 @@
-#include "TreeMaker.h"
-#include "Block_2.h"
-#include "Block_3.h"
-#include "Block_4.h"
-#include "Block_5.h"
-#include "Block_6.h"
+#include "../headers/TreeMaker.h"
+#include "../headers/Block_2.h"
+#include "../headers/Block_3.h"
+#include "../headers/Block_4.h"
+#include "../headers/Block_5.h"
+#include "../headers/Block_6.h"
 #include <iostream>
 
 TreeMaker :: TreeMaker(TreeMaker* ptr, string nm) : Base(ptr, nm) { };
