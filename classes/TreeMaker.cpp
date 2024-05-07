@@ -1,9 +1,9 @@
-#include "../headers/TreeMaker.h"
-#include "../headers/Block_2.h"
-#include "../headers/Block_3.h"
-#include "../headers/Block_4.h"
-#include "../headers/Block_5.h"
-#include "../headers/Block_6.h"
+#include "TreeMaker.h"
+#include "Block_2.h"
+#include "Block_3.h"
+#include "Block_4.h"
+#include "Block_5.h"
+#include "Block_6.h"
 #include <iostream>
 
 TreeMaker :: TreeMaker(TreeMaker* ptr, string nm) : Base(ptr, nm) { };
@@ -29,7 +29,7 @@ void TreeMaker :: MakeTree() {
 		if (!parent) {
 			cout << "Object tree\n";
 			printTree();
-			cout << "The head object " << parent_name << " is not found";
+			cout << "\nThe head object " << parent_name << " is not found";
 			exit(1);
 		}
 		
@@ -122,7 +122,9 @@ int TreeMaker :: Start() {
 				string s = "/" + coordinate;
 				while (obj->getRoot()) {
 					obj = obj->getRoot();
-					s = "/" + obj->getName() + s;
+					if (obj->getRoot()) {
+						s = "/" + obj->getName() + s;
+					}
 				}
 				cout << "The object " << s << " has been deleted\n";
 			}
