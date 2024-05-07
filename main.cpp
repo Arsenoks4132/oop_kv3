@@ -1,6 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
-#include "TreeMaker.h"
+#include "headers/TreeMaker.h"
 
 int main()
 {
